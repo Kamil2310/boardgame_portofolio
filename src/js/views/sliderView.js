@@ -27,6 +27,7 @@ class SliderView extends View {
   }
 
   createDots(games) {
+    this._dotContainer.innerHTML = "";
     games.forEach((_, i) => {
       this._dotContainer.insertAdjacentHTML(
         "beforeend",

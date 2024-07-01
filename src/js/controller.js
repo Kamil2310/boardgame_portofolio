@@ -21,6 +21,28 @@ const controlSearchResults = async function () {
     // 4) Render dots
     sliderView.createDots(model.state.search.results);
 
+    // 5) Make First Dot Active
+    sliderView.makeDotActive(model.state.search.game);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const myCollectionDisplay = async function () {
+  try {
+    // 0) Render spinner in place of slider
+    sliderView.renderSpinner();
+
+    // 1) Load search results
+    await model.loadUserCollection("Kamil2310");
+
+    // 2) Render first slide
+    model.state.search.game = 0;
+    sliderView.render(model.state.search.results[model.state.search.game]);
+
+    // 3) Render dots
+    sliderView.createDots(model.state.search.results);
+
     // 4) Make First Dot Active
     sliderView.makeDotActive(model.state.search.game);
   } catch (err) {
@@ -56,6 +78,7 @@ const controlSlider = function (changeGame) {
 const init = function () {
   sliderView.addHandlerSlide(controlSlider);
   searchView.addHandlerSearch(controlSearchResults);
+  searchView.addHandlerMyCollection(myCollectionDisplay);
 };
 
 init();

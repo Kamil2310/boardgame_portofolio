@@ -1,5 +1,6 @@
 class SearchView {
   _parentEl = document.querySelector(".search");
+  _myCollection = document.querySelector(".btn--my-collection");
 
   getQuery() {
     const query = this._parentEl.querySelector(".search-field").value;
@@ -16,6 +17,10 @@ class SearchView {
       e.preventDefault();
       handler();
     });
+  }
+
+  addHandlerMyCollection(handler) {
+    this._myCollection.addEventListener("click", handler);
   }
 }
 
