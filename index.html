@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="src/js/controller.js"></script>
+    <title>Boardgaming Portfolio</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+
+  <body>
+    <nav>
+    <header class="header">
+      <div class="header-icon">
+        <ion-icon class="icon" name="dice-outline"></ion-icon>
+      </div>
+      <!--
+      <div class="main-nav-gallery">
+        <img
+          src="src/img/header-image.jpg"
+          alt="Images of boardgame pieces from various games"
+        />
+      </div>-->
+      <form class="search">
+        <input
+          type="text"
+          class="search-field"
+          placeholder="Enter your Boardgamegeek username"
+        />
+        <button class="btn search-btn">
+          <span>Search</span>
+        </button>
+      </form>
+      <div class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#games">Games</a></li>
+          <li>
+            <a class="main-nav-link" href="#table">Tables</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </header>
+
+    <main>
+      <section class="section-games container" id="games">
+        <div class="slider-component">
+        <div class="slider flex flex--column">
+          <div class="slide flex flex--column"></div> 
+          <div class="slider-control flex flex--space-between">
+            <button class="slider-control-element slider-btn slider-btn--left">&larr;</button>
+            <div class="dots flex flex--space-between"></div>
+            <button class="slider-control-element slider-btn slider-btn--right">&rarr;</button>
+          </div>
+        </div>
+        </div>
+      </section>
+      
+      <section class="section-tables container" id="tables"></section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2024 Boardgaming Portfolio by Kamil Golias. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
